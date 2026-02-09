@@ -1,0 +1,46 @@
+## 📤 CÓMO PUBLICAR TU PÁGINA EN RENDER (GRATUITO)
+
+### Paso 1: Crea una cuenta en GitHub (necesario para Render)
+1. Ve a https://github.com/signup
+2. Crea una cuenta con tu email
+3. Verifica tu email
+
+### Paso 2: Crea un repositorio en GitHub
+1. Ve a https://github.com/new
+2. Nombre: `mi-pagina-ciberseguridad`
+3. Descripción: `Página web sobre ciberseguridad`
+4. Elige "Public"
+5. Click en "Create repository"
+
+### Paso 3: Sube tu código a GitHub
+Opción FÁCIL (sin command line):
+1. En tu repositorio, click en "Add file" → "Upload files"
+2. Arrastra o selecciona estos archivos:
+   - app.py
+   - index.html
+   - requirements.txt
+   - Procfile
+   - .gitignore
+   - Carpeta "static/" (con sus archivos)
+
+3. Click en "Commit changes"
+
+### Paso 4: Despliega en Render
+1. Ve a https://render.com
+2. Click en "Sign up" → "GitHub" (conecta tu cuenta GitHub)
+3. Click en "New Web Service"
+4. Selecciona tu repositorio `mi-pagina-ciberseguridad`
+5. Configura:
+   - Name: `mi-pagina-ciberseguridad` (o lo que quieras)
+   - Environment: `Python 3`
+   - Build Command: `pip install -r requirements.txt`
+   - Start Command: `gunicorn app:app`
+   - Plan: "Free"
+6. Click en "Create Web Service"
+
+¡LISTO! Tu página estará disponible en una URL como:
+https://mi-pagina-ciberseguridad.onrender.com
+
+### Cuando hagas cambios:
+1. Sube los archivos nuevos a GitHub
+2. Render automáticamente redesplegará tu página
